@@ -13,7 +13,12 @@ export const mockApi = createApi({
   endpoints: (build) => ({
     loadAllPizzas: build.query<IPizza[], loadAllPizzasSearchQuery>({
       query: (searchQuery: loadAllPizzasSearchQuery) => {
-        const { endpoint, filter, order, search, sortBy, title } = searchQuery;
+        let { category, endpoint, filter, order, search, sortBy, title } =
+          searchQuery;
+
+        if (category === 0) {
+          category = undefined;
+        }
 
         return {
           url: endpoint,
@@ -23,6 +28,7 @@ export const mockApi = createApi({
             search,
             sortBy,
             title,
+            category,
           },
         };
       },

@@ -16,4 +16,5 @@ export interface loadAllPizzasSearchQuery {
   search?: string;
   filter?: string;
   title?: string;
+  category?: number;
 }

@@ -2,11 +2,14 @@ import { useEffect } from "react";
 import { Categories } from "./components/Categories/Categories";
 import { Header } from "./components/Header/Header";
 import { Pizza } from "./components/Pizza/Pizza";
+import { useAppSelector } from "./hooks/useAppSelector";
 
 import "./scss/app.scss";
 import { useLazyLoadAllPizzasQuery } from "./store/Api/mock.api";
 
 function App() {
+  const { category } = useAppSelector((state) => state.filterSlice);
+
   const [
     fetchPizzas,
     { isLoading: isPizzasLoading, isError: isPizzasError, data: pizzas },
@@ -15,8 +18,9 @@ function App() {
   useEffect(() => {
     fetchPizzas({
       endpoint: "/Pizza-list",
+      category,
     });
-  }, []);
+  }, [category]);
 
   return (
     <div className="wrapper">

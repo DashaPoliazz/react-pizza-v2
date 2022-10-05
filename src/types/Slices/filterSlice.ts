@@ -1,7 +1,8 @@
 export interface IFilterSlice {
-  sortByFilter: string | null;
-  orderFilter: "ask" | "desc" | null;
-  searchQuery: string | null;
-  filter: string | null;
-  title: string | null;
+  sortByFilter: string | undefined;
+  orderFilter: "ask" | "desc" | undefined;
+  searchQuery: string | undefined;
+  filter: string | undefined;
+  title: string | undefined;
+  category: number | undefined;
 }

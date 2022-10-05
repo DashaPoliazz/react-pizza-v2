@@ -1,14 +1,44 @@
+import { useState } from "react";
+
+import { v4 as uuidv4, v4 } from "uuid";
+import classNames from "classnames";
+
+import { ICategory } from "../../types/components/categories";
+import { useActions } from "../../hooks/useActions";
+import { useAppSelector } from "../../hooks/useAppSelector";
+
+const categorieList: ICategory[] = [
+  "All",
+  "Meat",
+  "Vegan",
+  "Grill",
+  "Spicy",
+  "Closed",
+].map((category) => ({
+  categoryName: category,
+  id: v4(),
+}));
+
 export const Categories = () => {
+  const { category } = useAppSelector((state) => state.filterSlice);
+
+  const { setCategory } = useActions();
+
   return (
     <div className="content__top">
       <div className="categories">
         <ul>
-          <li className="active">All</li>
-          <li>Meat</li>
-          <li>Veagn</li>
-          <li>Grill</li>
-          <li>Spicy</li>
-          <li>Closed</li>
+          {categorieList.map(({ categoryName, id }, index) => (
+            <li
+              key={id}
+              onClick={() => setCategory(index)}
+              className={classNames({
+                active: category === index,
+              })}
+            >
+              {categoryName}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="sort">
