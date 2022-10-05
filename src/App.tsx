@@ -8,7 +8,9 @@ import "./scss/app.scss";
 import { useLazyLoadAllPizzasQuery } from "./store/Api/mock.api";
 
 function App() {
-  const { category } = useAppSelector((state) => state.filterSlice);
+  const { category, sortByFilter } = useAppSelector(
+    (state) => state.filterSlice
+  );
 
   const [
     fetchPizzas,
@@ -19,8 +21,9 @@ function App() {
     fetchPizzas({
       endpoint: "/Pizza-list",
       category,
+      sortBy: sortByFilter,
     });
-  }, [category]);
+  }, [category, sortByFilter]);
 
   return (
     <div className="wrapper">

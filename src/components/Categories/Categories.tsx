@@ -3,7 +3,7 @@ import { useState } from "react";
 import { v4 as uuidv4, v4 } from "uuid";
 import classNames from "classnames";
 
-import { ICategory } from "../../types/components/categories";
+import { ICategory, ISortType } from "../../types/components/categories";
 import { useActions } from "../../hooks/useActions";
 import { useAppSelector } from "../../hooks/useAppSelector";
 
@@ -19,10 +19,21 @@ const categorieList: ICategory[] = [
   id: v4(),
 }));
 
-export const Categories = () => {
-  const { category } = useAppSelector((state) => state.filterSlice);
+const sortList: ISortType[] = ["rating", "price", "alphabet"].map(
+  (sortItem) => ({
+    sortType: sortItem,
+    id: v4(),
+  })
+);
 
-  const { setCategory } = useActions();
+export const Categories = () => {
+  const [isPopup, setIsPopup] = useState(false);
+
+  const { category, sortByFilter } = useAppSelector(
+    (state) => state.filterSlice
+  );
+
+  const { setCategory, setSortByFilter } = useActions();
 
   return (
     <div className="content__top">
@@ -41,7 +52,7 @@ export const Categories = () => {
           ))}
         </ul>
       </div>
-      <div className="sort">
+      <div onClick={() => setIsPopup(!isPopup)} className="sort">
         <div className="sort__label">
           <svg
             width="10"
@@ -56,15 +67,19 @@ export const Categories = () => {
             />
           </svg>
           <b>Sort by:</b>
-          <span>popularity</span>
+          <span>{sortByFilter}</span>
         </div>
-        <div className="sort__popup">
-          <ul>
-            <li className="active">popularity</li>
-            <li>price</li>
-            <li>alphabet</li>
-          </ul>
-        </div>
+        {isPopup && (
+          <div className="sort__popup">
+            <ul>
+              {sortList.map(({ sortType, id }) => (
+                <li key={id} onClick={() => setSortByFilter(sortType)}>
+                  {sortType}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
