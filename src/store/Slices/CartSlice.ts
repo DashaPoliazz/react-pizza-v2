@@ -3,6 +3,8 @@ import { ICartSliceState, IProductCart } from "../../types/Slices/cartSlice";
 
 const initialState: ICartSliceState = {
   products: [],
+  totalQuantity: 0,
+  totalPrice: 0,
 };
 
 export const cartSlice = createSlice({
@@ -20,6 +22,7 @@ export const cartSlice = createSlice({
         foundedProduct.quantity++;
       }
     },
+    // setTotalQuantity: (state, PayloadAction<IProductCart>),
     clearProduct: (state) => {
       state.products.length = 0;
     },
