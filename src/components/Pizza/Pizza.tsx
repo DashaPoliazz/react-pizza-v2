@@ -66,7 +66,7 @@ export const Pizza: React.FC<Props> = ({
             />
           </svg>
           <span>Add</span>
-          {quantity && <i>{quantity}</i>}
+          {quantity > 0 && <i>{quantity}</i>}
         </div>
       </div>
     </div>
