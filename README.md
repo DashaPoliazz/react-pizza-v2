@@ -1,64 +1,124 @@
+<h1 align="center">
+  <br>
+  <img src="./src/assets/images/pizza-logo.svg" alt="React-pizza" width="200">
+  <br>
+  Markdownify
+  <br>
+</h1>
+
+<h4 align="center">A minimal Markdown Editor desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a>.</h4>
+
 <p align="center">
-  <a href="https://www.meetup.com/Angular-Medellin/">
-    <img width=100% src="assets/images/logo.png">
+  <a href="https://badge.fury.io/js/electron-markdownify">
+    <img src="https://badge.fury.io/js/electron-markdownify.svg"
+         alt="Gitter">
+  </a>
+  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  </a>
+  <a href="https://www.paypal.me/AmitMerchant">
+    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://www.meetup.com/Angular-Medellin/members/">
-    <img src="https://img.shields.io/badge/👫-+2142_miembros-1d2935.svg?style=flat" alt="Contribuyentes">
-  </a>
-  <a href="#-contribuyentes-">
-    <img src="https://img.shields.io/badge/👫-+50_contribuyentes-1d2935.svg?style=flat" alt="Contribuyentes">
-  </a>
-  <a href="http://yuxiglobal.com/">
-    <img src="https://img.shields.io/badge/💰-1_patrocinador-1d2935.svg?style=flat" alt="Speakers">
-  </a>
-  <a href="https://twitter.com/jdjuan">
-    <img src="https://img.shields.io/badge/🕴🕴-3_organizadores-1d2935.svg?style=flat" alt="Speakers">
-  </a>
-  <a href="./CODE_OF_CONDUCT.md">
-    <img src="https://img.shields.io/badge/👮-1_código_de_conducta-1d2935.svg?style=flat" alt="Código de Conducta">
-  </a>
-
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#download">Download</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
 </p>
 
-<h1 align="center"> ⭐️ NgColombia: Medellín ⭐️ </h1>
+![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
 
-<h2 align="center"><strong><a href="https://join.slack.com/t/ng-colombia/shared_invite/enQtMjgwMjc3ODk1NjMyLTBjMmE4YmQzYTA0ZGNjNTVhMmNlMmQ1YWRjNGFlOWE4MDBjMWM3M2UwNmFjZWFhNmZkYzVmNDc3ZWQ5MmQwZmY">👉 ÚNETE A NUESTRO SLACK 👈</a></strong></h2>
+## Key Features
 
-<br>
+- LivePreview - Make changes, See changes
+  - Instantly see what your Markdown documents look like in HTML as you create them.
+- Sync Scrolling
+  - While you type, LivePreview will automatically scroll to the current location you're editing.
+- GitHub Flavored Markdown
+- Syntax highlighting
+- [KaTeX](https://khan.github.io/KaTeX/) Support
+- Dark/Light mode
+- Toolbar for basic Markdown formatting
+- Supports multiple cursors
+- Save the Markdown preview as PDF
+- Emoji support in preview :tada:
+- App will keep alive in tray for quick usage
+- Full screen mode
+  - Write distraction free.
+- Cross platform
+  - Windows, macOS and Linux ready.
 
-<h1 align="center"> ️💚️ Agradecimientos 💚 </h1>
+## How To Use
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/3171900?v=3" width="100px;"/><br /><sub><b>Juan Herrera</b></sub>](http://juandavidherrera.com/en)<br />        | [<img src="https://avatars0.githubusercontent.com/u/464978?v=3" width="100px;"/><br /><sub><b>Alejandro Ñáñez</b></sub>](http://co.linkedin.com/in/alejandronanez/)<br /> | [<img src="https://avatars0.githubusercontent.com/u/8260962?v=3" width="100px;"/><br /><sub><b>Daniel Correa</b></sub>](https://github.com/danielcb29)<br />          | [<img src="https://avatars2.githubusercontent.com/u/19215389?v=3" width="100px;"/><br /><sub><b>Melina Mejía</b></sub>](https://github.com/MelinaMejia95)<br /> | [<img src="https://avatars3.githubusercontent.com/u/10712317?v=3" width="100px;"/><br /><sub><b>Felipe Jaramillo </b></sub>](https://github.com/p1p3)<br />    | [<img src="https://avatars1.githubusercontent.com/u/7959823?v=3" width="100px;"/><br /><sub><b>Diego Coy</b></sub>](https://diegocoy.com)<br />                               | [<img src="https://avatars2.githubusercontent.com/u/26748227?s=400&v=4" width="100px;"/><br /><sub><b>Laura Ciro</b></sub>](https://github.com/ltciro)<br />  |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://avatars1.githubusercontent.com/u/9866446?v=3" width="100px;"/><br /><sub><b>Fabian Buitrago</b></sub>](https://github.com/Fabian-Buitrago)<br /> | [<img src="https://avatars2.githubusercontent.com/u/25943655?v=3" width="100px;"/><br /><sub><b>teffcode</b></sub>](https://github.com/teffcode)<br />                    | [<img src="https://avatars3.githubusercontent.com/u/9259335?v=3" width="100px;"/><br /><sub><b>Alvaro Martinez</b></sub>](https://github.com/alvaromartinez986)<br /> | [<img src="https://avatars0.githubusercontent.com/u/348883?v=3" width="100px;"/><br /><sub><b>Jorge Ramírez</b></sub>](http://shinkei.github.io/)<br />         | [<img src="https://avatars0.githubusercontent.com/u/19542631?v=3" width="100px;"/><br /><sub><b>Camilo Perez</b></sub>](https://github.com/juancapm09)<br />   | [<img src="https://avatars3.githubusercontent.com/u/20744476?v=4" width="100px;"/><br /><sub><b>Harlen Giraldo</b></sub>](https://github.com/H4isan)<br />                    | [<img src="https://avatars2.githubusercontent.com/u/16061815?v=4" width="100px;"/><br /><sub><b>Camila Gomez</b></sub>](https://github.com/camigomez35)<br /> |
-| [<img src="https://avatars3.githubusercontent.com/u/5982204?v=4" width="100px;"/><br /><sub><b>Jorge Cano</b></sub>](https://medium.com/@jorgeucano)<br />          | [<img src="https://avatars2.githubusercontent.com/u/39881?v=4" width="100px;"/><br /><sub><b>Josue</b></sub>](https://twitter.com/eusoj)<br />                            | [<img src="https://avatars2.githubusercontent.com/u/6851052?v=4" width="100px;"/><br /><sub><b>camilo</b></sub>](https://github.com/camilo56)<br />                   | [<img src="https://avatars1.githubusercontent.com/u/1382824?v=4" width="100px;"/><br /><sub><b>Pablo Velásquez</b></sub>](http://www.pablovem.com/)<br />       | [<img src="https://avatars3.githubusercontent.com/u/9832291?v=4" width="100px;"/><br /><sub><b>Carlos Angulo</b></sub>](https://github.com/CarlosAngulo)<br /> | [<img src="https://avatars0.githubusercontent.com/u/7102342?v=4" width="100px;"/><br /><sub><b>royalcas</b></sub>](https://github.com/royalcas)<br />                         | [<img src="https://avatars0.githubusercontent.com/u/4933011?v=4" width="100px;"/><br /><sub><b>Israel Guzman</b></sub>](https://github.com/GuzmanPI)<br />    |
-| [<img src="https://avatars2.githubusercontent.com/u/17752391?v=4" width="100px;"/><br /><sub><b>Santiago Molina</b></sub>](https://www.justbit.site)<br />          | [<img src="https://avatars0.githubusercontent.com/u/3485075?v=4" width="100px;"/><br /><sub><b>Luis Aviles</b></sub>](https://luixaviles.com)<br />                       | [<img src="https://avatars2.githubusercontent.com/u/3689856?v=4" width="100px;"/><br /><sub><b>Carlos Roso</b></sub>](http://carlosroso.com)<br />                    | [<img src="https://avatars2.githubusercontent.com/u/2563374?v=4" width="100px;"/><br /><sub><b>Sherry</b></sub>](https://github.com/sazimi)<br />               | [<img src="https://avatars2.githubusercontent.com/u/3924809?v=4" width="100px;"/><br /><sub><b>Marian Villa</b></sub>](http://www.marianvilla.co)<br />        | [<img src="https://avatars1.githubusercontent.com/u/1557524?v=4" width="100px;"/><br /><sub><b>Carlos Ortiz</b></sub>](http://theowlo.blogspot.com)<br />                     | [<img src="https://avatars0.githubusercontent.com/u/165056?v=4" width="100px;"/><br /><sub><b>Stephen Fluin</b></sub>](https://github.com/StephenFluin)<br /> |
-| [<img src="https://avatars0.githubusercontent.com/u/26145998?v=4" width="100px;"/><br /><sub><b>Mateo Castaño</b></sub>](https://github.com/matew17)<br />          | [<img src="https://avatars3.githubusercontent.com/u/22488812?v=4" width="100px;"/><br /><sub><b>Danilo Gutiérrez</b></sub>](https://github.com/CrisDan1905)<br />         | [<img src="https://avatars1.githubusercontent.com/u/1154098?v=4" width="100px;"/><br /><sub><b>Bonnie Brennan</b></sub>](https://twitter.com/bonnster75)<br />        | [<img src="https://avatars0.githubusercontent.com/u/19338528?v=4" width="100px;"/><br /><sub><b>Robin Hurtado</b></sub>](https://github.com/robinHurtado)<br /> | [<img src="https://avatars3.githubusercontent.com/u/18565471?v=4" width="100px;"/><br /><sub><b>Angela Ordoñez</b></sub>](http://angelitaooo.github.io)<br />  | [<img src="https://avatars2.githubusercontent.com/u/9698639?v=4" width="100px;"/><br /><sub><b>Carlos Esteban Lopez Jaramillo</b></sub>](https://github.com/luchillo17)<br /> | [<img src="https://avatars3.githubusercontent.com/u/7611944?v=4" width="100px;"/><br /><sub><b>Nicolas Molina Monroy</b></sub>](http://nicobytes.com)<br />   |
-| [<img src="https://avatars1.githubusercontent.com/u/8793032?v=4" width="100px;"/><br /><sub><b>Sebastian Molano</b></sub>](http://www.nebulae.com.co)<br />         | [<img src="https://avatars3.githubusercontent.com/u/9942486?v=4" width="100px;"/><br /><sub><b>Frank Alejo Betancur</b></sub>](https://github.com/Krank2me)<br />         | [<img src="https://avatars1.githubusercontent.com/u/19813968?v=4" width="100px;"/><br /><sub><b>Ana Cidre</b></sub>](http://anacidre.com)<br />                       | [<img src="https://avatars1.githubusercontent.com/u/34170261?v=4" width="100px;"/><br /><sub><b>Juan Felipe Lujan</b></sub>](http://www.felipelujan.com)<br />  | [<img src="https://avatars2.githubusercontent.com/u/10585946?v=4" width="100px;"/><br /><sub><b>Manuela</b></sub>](http://www.manucastrillonm.co)<br />        | [<img src="https://avatars3.githubusercontent.com/u/5604472?v=4" width="100px;"/><br /><sub><b>AresDev</b></sub>](https://github.com/AresDev)<br />                           | [<img src="https://avatars3.githubusercontent.com/u/36491?v=4" width="100px;"/><br /><sub><b>Bram Borggreve</b></sub>](http://colmena.io/)<br />              |
-| [<img src="https://avatars3.githubusercontent.com/u/6992488?v=4" width="100px;"/><br /><sub><b>maleja111</b></sub>](https://github.com/maleja111)<br />             | [<img src="https://avatars0.githubusercontent.com/u/7296623?v=4" width="100px;"/><br /><sub><b>Jorge Vergara</b></sub>](http://javebratt.com)<br />                       | [<img src="https://avatars0.githubusercontent.com/u/30100043?v=4" width="100px;"/><br /><sub><b>Juanjo Rendon</b></sub>](https://github.com/jnrndn)<br />             |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
+```bash
+# Clone this repository
+$ git clone https://github.com/amitmerchant1990/electron-markdownify
 
-<h1 align="center"> 😎 Síguenos 😎 </h1>
+# Go into the repository
+$ cd electron-markdownify
 
-<div align="center">
-Entérate de los últimos anuncions y noticias, síguenos en nuestro Twitter o pregúntanos lo que quieras en Slack:
-<br>
-<br>
-  <strong><a href="https://twitter.com/NgColombiaConf">Twitter - </a></strong>
-  <strong><a href="https://join.slack.com/t/ng-colombia/shared_invite/enQtMjgwMjc3ODk1NjMyLTBjMmE4YmQzYTA0ZGNjNTVhMmNlMmQ1YWRjNGFlOWE4MDBjMWM3M2UwNmFjZWFhNmZkYzVmNDc3ZWQ5MmQwZmY">Slack - </a></strong>
-  <strong><a href="https://twitter.com/search?q=%23ngcolombia&src=typd">#NgColombia</a></strong>
-</div>
+# Install dependencies
+$ npm install
 
-<h1 align="center"> ️🤝 Patrocinadores 🤝 </h1>
+# Run the app
+$ npm start
+```
 
-<div align="center">
-<a href="http://yuxiglobal.com/" target="_blank">
-<img width=30% src="assets/images/yuxi-global-logo.png">
+> **Note**
+> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+
+## Download
+
+You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
+
+## Emailware
+
+Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
+
+## Credits
+
+This software uses the following open source packages:
+
+- [Electron](http://electron.atom.io/)
+- [Node.js](https://nodejs.org/)
+- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [showdown](http://showdownjs.github.io/showdown/)
+- [CodeMirror](http://codemirror.net/)
+- Emojis are taken from [here](https://github.com/arvida/emoji-cheat-sheet.com)
+- [highlight.js](https://highlightjs.org/)
+
+## Related
+
+[markdownify-web](https://github.com/amitmerchant1990/markdownify-web) - Web version of Markdownify
+
+## Support
+
+<a href="https://www.buymeacoffee.com/5Zn8Xh3l9" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+<p>Or</p>
+
+<a href="https://www.patreon.com/amitmerchant">
+	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
-</div>
+
+## You may also like...
+
+- [Pomolectron](https://github.com/amitmerchant1990/pomolectron) - A pomodoro app
+- [Correo](https://github.com/amitmerchant1990/correo) - A menubar/taskbar Gmail App for Windows and macOS
+
+## License
+
+MIT
+
+---
+
+> [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
+> GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
+> Twitter [@amit_merchant](https://twitter.com/amit_merchant)
