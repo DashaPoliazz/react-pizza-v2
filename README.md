@@ -1,16 +1,16 @@
 <h1 align="center">
   <br>
-  <img src="./src/assets/images/pizza-logo.svg" alt="React-pizza" width="200">
+  <img src="./src/assets/images/pizza-logo.svg" alt="React-pizza" width="100">
   <br>
-  Markdownify
+  React-pizza
   <br>
 </h1>
 
-<h4 align="center">A minimal Markdown Editor desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a>.</h4>
+<h4 align="center">A minimal pizzeria application build on <a href="https://reactjs.org/" target="_blank">React</a>.</h4>
 
 <p align="center">
   <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
+    <img src="https://img.shields.io/badge/demo-online-green.svg"
          alt="Gitter">
   </a>
   <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
@@ -122,3 +122,5 @@ MIT
 > [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
 > GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
 > Twitter [@amit_merchant](https://twitter.com/amit_merchant)
+
+<!-- NEW -->
