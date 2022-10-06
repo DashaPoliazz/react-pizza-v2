@@ -1,42 +1,21 @@
-import { useEffect } from "react";
-import { Categories } from "./components/Categories/Categories";
 import { Header } from "./components/Header/Header";
-import { Pizza } from "./components/Pizza/Pizza";
-import { useAppSelector } from "./hooks/useAppSelector";
+import { Home } from "./pages/Home/Home";
+
+import { Routes, Route } from "react-router-dom";
 
 import "./scss/app.scss";
-import { useLazyLoadAllPizzasQuery } from "./store/Api/mock.api";
+import { Cart } from "./pages/Cart/Cart";
 
 function App() {
-  const { category, sortByFilter } = useAppSelector(
-    (state) => state.filterSlice
-  );
-
-  const [
-    fetchPizzas,
-    { isLoading: isPizzasLoading, isError: isPizzasError, data: pizzas },
-  ] = useLazyLoadAllPizzasQuery();
-
-  useEffect(() => {
-    fetchPizzas({
-      endpoint: "/Pizza-list",
-      category,
-      sortBy: sortByFilter,
-    });
-  }, [category, sortByFilter]);
-
   return (
     <div className="wrapper">
       <Header />
       <div className="content">
         <div className="container">
-          <Categories />
-          <h2 className="content__title">All pizzas</h2>
-          <div className="content__items">
-            {pizzas?.map((pizza) => (
-              <Pizza key={pizza.id} pizzaProps={pizza} />
-            ))}
-          </div>
+          <Routes>
+            <Route path="/react-pizza-v2" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
         </div>
       </div>
     </div>

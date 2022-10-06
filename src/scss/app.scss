@@ -31,6 +31,10 @@ body {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 
+    &--card {
+      display: block;
+    }
+
     @media (max-width: 1400px) {
       grid-template-columns: repeat(3, 1fr);
     }

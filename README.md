@@ -17,7 +17,8 @@
 </p>
 
 <p align="center">
-  <a href="#key-features">Technology stack</a> •
+    
+  •<a href="#key-features">Technology stack</a> •
   <a href="#how-to-use">How To Use</a> •
 </p>
 

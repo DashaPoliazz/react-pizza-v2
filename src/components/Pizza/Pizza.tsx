@@ -3,6 +3,9 @@ import { useState } from "react";
 import classNames from "classnames";
 
 import { IPizza } from "../../types/Api/mock.ts/mockTypes";
+import { useActions } from "../../hooks/useActions";
+import { useSelector } from "react-redux";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 interface Props {
   pizzaProps: IPizza;
@@ -10,12 +13,29 @@ interface Props {
 
 const doughType = ["thin", "traditionally"];
 
-export const Pizza: React.FC<Props> = ({
-  pizzaProps: { category, id, imageUrl, price, rating, sizes, title, types },
-}) => {
+export const Pizza: React.FC<Props> = ({ pizzaProps }) => {
+  const { category, id, imageUrl, price, rating, sizes, title, types } =
+    pizzaProps;
+
   const [typeIndex, setTypeIndex] = useState(0);
   const [sizeIndex, setSizeIndex] = useState(0);
   const [quantity, setQuantity] = useState(0);
+
+  const { products } = useAppSelector((state) => state.cartSlice);
+  const { addProductToCart } = useActions();
+
+  const currentPizza = products.find((product) => product.id === id);
+
+  const onClickAddHandler = (serverPizza: IPizza) => {
+    const cartPizza = {
+      ...serverPizza,
+      types: doughType[typeIndex],
+      sizes: sizes[sizeIndex],
+      quantity: quantity + 1,
+    };
+
+    addProductToCart(cartPizza);
+  };
 
   return (
     <div className="pizza-block">
@@ -25,6 +45,7 @@ export const Pizza: React.FC<Props> = ({
         <ul>
           {types.map((type, index) => (
             <li
+              key={index}
               onClick={() => setTypeIndex(index)}
               className={classNames({
                 active: index === typeIndex,
@@ -37,6 +58,7 @@ export const Pizza: React.FC<Props> = ({
         <ul>
           {sizes.map((size, index) => (
             <li
+              key={index}
               onClick={() => setSizeIndex(index)}
               className={classNames({
                 active: index === sizeIndex,
@@ -50,7 +72,10 @@ export const Pizza: React.FC<Props> = ({
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">from {price} $</div>
         <div
-          onClick={() => setQuantity(quantity + 1)}
+          onClick={() => {
+            onClickAddHandler(pizzaProps);
+            setQuantity(quantity + 1);
+          }}
           className="button button--outline button--add"
         >
           <svg
@@ -66,7 +91,7 @@ export const Pizza: React.FC<Props> = ({
             />
           </svg>
           <span>Add</span>
-          {quantity > 0 && <i>{quantity}</i>}
+          {currentPizza?.quantity && <i>{currentPizza?.quantity}</i>}
         </div>
       </div>
     </div>
