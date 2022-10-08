@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import { useActions } from "../../hooks/useActions";
 import { useAppSelector } from "../../hooks/useAppSelector";
 
 export const Cart = () => {
   const { products } = useAppSelector((state) => state.cartSlice);
+
+  const { removeProductFromCart, addProductToCart, clearProduct } =
+    useActions();
 
   return (
     <div className="cart">
@@ -81,8 +85,11 @@ export const Cart = () => {
         </div>
       </div>
       <div className="content__items content__items--card">
-        {products.map(
-          ({ imageUrl, title, types, sizes, price, quantity, id }, index) => (
+        {products.map((product, index) => {
+          const { imageUrl, title, types, sizes, price, quantity, id } =
+            product;
+
+          return (
             <div key={index} className="cart__item">
               <div className="cart__item-img">
                 <img
@@ -98,7 +105,10 @@ export const Cart = () => {
                 </p>
               </div>
               <div className="cart__item-count">
-                <div className="button button--outline button--circle cart__item-count-minus">
+                <div
+                  onClick={() => removeProductFromCart(id)}
+                  className="button button--outline button--circle cart__item-count-minus"
+                >
                   <svg
                     width="10"
                     height="10"
@@ -117,7 +127,10 @@ export const Cart = () => {
                   </svg>
                 </div>
                 <b>{quantity}</b>
-                <div className="button button--outline button--circle cart__item-count-plus">
+                <div
+                  onClick={() => addProductToCart(product)}
+                  className="button button--outline button--circle cart__item-count-plus"
+                >
                   <svg
                     width="10"
                     height="10"
@@ -160,8 +173,8 @@ export const Cart = () => {
                 </div>
               </div>
             </div>
-          )
-        )}
+          );
+        })}
       </div>
       <div className="cart__bottom">
         <div className="cart__bottom-details">

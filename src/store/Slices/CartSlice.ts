@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { isElementInArrayExist } from "../../helpers/isElementInArrayExist";
 import { ICartSliceState, IProductCart } from "../../types/Slices/cartSlice";
 
 const initialState: ICartSliceState = {
@@ -12,19 +13,32 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addProductToCart: (state, action: PayloadAction<IProductCart>) => {
-      const foundedProduct = state.products.find(
-        (product) => product.id === action.payload.id
+      const isProductExist = isElementInArrayExist(
+        action.payload.id,
+        state.products
       );
 
-      if (!foundedProduct) {
+      if (!isProductExist) {
         state.products.push(action.payload);
       } else {
-        foundedProduct.quantity++;
+        isProductExist.quantity++;
       }
     },
     // setTotalQuantity: (state, PayloadAction<IProductCart>),
     clearProduct: (state) => {
       state.products.length = 0;
+    },
+    removeProductFromCart: (state, action: PayloadAction<number>) => {
+      const isProductExist = isElementInArrayExist(
+        action.payload,
+        state.products
+      );
+
+      if (isProductExist.quantity > 1) {
+        isProductExist.quantity -= 1;
+      } else {
+        state.products = state.products.filter((p) => p.id !== action.payload);
+      }
     },
   },
 });
