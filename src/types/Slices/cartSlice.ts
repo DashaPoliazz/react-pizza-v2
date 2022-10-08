@@ -15,3 +15,8 @@ export interface IProductCart {
   rating: number;
   quantity: number;
 }
+
+export interface IRemoveProductFromCart {
+  id: number;
+  isTotalRemove?: boolean;
+}

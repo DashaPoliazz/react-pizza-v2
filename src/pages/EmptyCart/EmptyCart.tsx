@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
+
 import emptyCart from "../../assets/images/empty-cart.png";
 
 export const EmptyCart = () => {
   return (
     <div className="cart cart--empty">
-      <h2>Корзина пустая 😕</h2>
+      <h2>Cart is empty 😕</h2>
       <p>
-        Вероятней всего, вы не заказывали ещё пиццу.
+        Perhaps, you haven't been ordered pizza yet.
         <br />
-        Для того, чтобы заказать пиццу, перейди на главную страницу.
+        To order pizza, please, go to main page.
       </p>
       <img src={emptyCart} alt="Empty cart" />
       <Link to="/react-pizza-v2" className="button button--black">
-        <span>Вернуться назад</span>
+        <span>Go to main page</span>
       </Link>
     </div>
   );
